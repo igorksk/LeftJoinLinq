@@ -1,4 +1,6 @@
 ﻿using LeftJoinLinq;
+using System;
+using System.Linq;
 
 // Left Outer Join using Query Syntax
 var QSOuterJoin = from emp in Employee.GetAllEmployees()
@@ -27,8 +29,10 @@ var MSOuterJOIN = Employee.GetAllEmployees()
                                    x => x.add.DefaultIfEmpty(),
                                    (employee, address) => new { employee, address }
                               );
+
 foreach (var item in MSOuterJOIN)
 {
     Console.WriteLine($"Name : {item.employee.emp.Name}, Address : {item.address?.AddressLine} ");
 }
+
 Console.ReadLine();

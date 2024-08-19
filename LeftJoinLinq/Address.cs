@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LeftJoinLinq
 {
@@ -12,13 +8,13 @@ namespace LeftJoinLinq
         public string? AddressLine { get; set; }
         public static List<Address> GetAddress()
         {
-            return new List<Address>()
-            {
+            return
+            [
                 new Address { ID = 1, AddressLine = "AddressLine1"},
                 new Address { ID = 2, AddressLine = "AddressLine2"},
                 new Address { ID = 5, AddressLine = "AddressLine5"},
                 new Address { ID = 6, AddressLine = "AddressLine6"},
-            };
+            ];
         }
     }
 }
